@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slide-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all .5s;
+}
+
+.slider .slide-inner .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slide-inner .slide-active {
+    z-index: 99;
+}
+
+.slider .slide .image-text .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: inherit;
+    background-color: #0e12249e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .lines {
+    grid-gap: 10px;
+    position: absolute;
+    border: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 2%;
+    z-index: 999;
+}
+
+.slider .lines .slide-line {
+    height: 3px;
+    background-color: #fff;
+    left: 0px;
+    width: 30px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.slider .lines .slide-line.active-line {
+    background-color: rgb(13, 9, 36);
+}
+
+.slider .image-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider .image-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider button.left {
+    left: 0px !important;
+}
+
+.slider button.right,
+.slider button.left {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 30px;
+    color: #fff;
+}
+
+.slider button.right i,
+.slider button.left i {
+    transform: scale(0);
+    transition: all .5s;
+}
+
+.slider button.right:hover,
+.slider button.left:hover {
+    background-color: #130f2241;
+}
+
+.slider button.right:hover i {
+    transform: scale(1) !important;
+}
+
+.slider button.left:hover i {
+    transform: scale(1) !important;
+}
+
+.text-content {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-content h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.text-content p {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.text-content button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgb(236, 119, 24);
+    border: 1px solid rgb(236, 119, 24);
+    border-radius: 5px;
+    cursor: pointer;
+}
